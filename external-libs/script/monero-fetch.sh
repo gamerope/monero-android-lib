@@ -6,11 +6,11 @@ source script/env.sh
 
 cd $EXTERNAL_LIBS_BUILD_ROOT
 
-url="https://github.com/m2049r/monero"
-version="release-v0.16.0.0-monerujo"
+url="https://github.com/lozzax-project/lozzax"
+version="master"
 
 if [ ! -d "monero" ]; then
-  git clone ${url} -b ${version}
+  git clone ${url} monero -b ${version}
   cd monero
   git submodule update --recursive --init
 else
