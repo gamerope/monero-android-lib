@@ -9,7 +9,7 @@ set -e
 SRC_DIR=$EXTERNAL_LIBS_BUILD_ROOT/android-openssl
 TARGET_DIR=$EXTERNAL_LIBS_ROOT/openssl
 
-archs=(arm arm64)
+archs=(arm arm64 x86_64)
 
 for arch in ${archs[@]}; do
     xLIB="/lib"
@@ -26,12 +26,6 @@ for arch in ${archs[@]}; do
             _ANDROID_EABI=aarch64-linux-android-4.9
             _ANDROID_EABI_INC=aarch64-linux-android
             configure_platform="linux-generic64 -DB_ENDIAN" ;;
-        "x86")
-            _ANDROID_TARGET_SELECT=arch-x86
-            _ANDROID_ARCH=arch-x86
-            _ANDROID_EABI=x86-4.9
-            _ANDROID_EABI_INC=i686-linux-android
-            configure_platform="android-x86" ;;
         "x86_64")
             _ANDROID_TARGET_SELECT=arch-x86_64
             _ANDROID_ARCH=arch-x86_64
