@@ -14,7 +14,7 @@ lib_root=$EXTERNAL_LIBS_ROOT
 
 build_type=release # or debug
 android_api=21
-archs=(arm arm64 x86_64)
+archs=(arm arm64)
 
 for arch in ${archs[@]}; do
     ldflags=""
@@ -29,11 +29,6 @@ for arch in ${archs[@]}; do
         "arm64")
             target_host=aarch64-linux-android
             xarch="armv8-a"
-            sixtyfour=ON
-            ;;
-        "x86_64")
-            target_host=x86_64-linux-android
-            xarch="x86-64"
             sixtyfour=ON
             ;;
         *)
