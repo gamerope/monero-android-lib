@@ -5,7 +5,7 @@
 set -e
 
 packages=(boost openssl monero libsodium)
-archs=(arm arm64 x86_64)
+archs=(arm arm64)
 
 for arch in ${archs[@]}; do
     case ${arch} in
@@ -14,9 +14,6 @@ for arch in ${archs[@]}; do
 			;;
         "arm64")
 			xarch="arm64-v8a"
-            ;;
-        "x86_64")
-			xarch="x86_64"
             ;;
         *)
 			exit 16
