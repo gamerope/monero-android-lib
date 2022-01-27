@@ -6,7 +6,7 @@ source script/env.sh
 
 cd $EXTERNAL_LIBS_BUILD_ROOT
 
-url="https://github.com/mylozzax/lozzax"
+url="https://github.com/mylozzax/monero"
 version="master"
 
 if [ ! -d "monero" ]; then
