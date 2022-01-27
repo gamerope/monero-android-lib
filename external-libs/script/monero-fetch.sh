@@ -6,8 +6,8 @@ source script/env.sh
 
 cd $EXTERNAL_LIBS_BUILD_ROOT
 
-url="https://github.com/gamerope/monero"
-version="release-v0.17.3.0-monerujo"
+url="https://github.com/mylozzax/lozzax"
+version="master"
 
 if [ ! -d "monero" ]; then
   git clone ${url} -b ${version}
